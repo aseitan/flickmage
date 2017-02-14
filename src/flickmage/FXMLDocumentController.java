@@ -26,11 +26,12 @@ public class FXMLDocumentController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb)
     {
+        if (0==0)return;
         String path = "cache/";
         File folder = new File(path);
         File[] listOfFiles = folder.listFiles();
 
-        if(imageContainer != null )
+        if(imageContainer == null )
         {
             for (final File file : listOfFiles) {
                 

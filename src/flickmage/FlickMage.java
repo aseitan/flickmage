@@ -1,7 +1,6 @@
 package flickmage;
 
 import download.ImageDownloaderThread;
-import static java.lang.Boolean.TRUE;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,10 +21,9 @@ public class FlickMage extends Application {
 
     public static void main(String[] args) {
         ImageDownloaderThread th = new ImageDownloaderThread();
-        th.initializeTag("car");
+        th.initializeTag("coding");
         th.run();
         
         launch(args);
-        
     }
 }

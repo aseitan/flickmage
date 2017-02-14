@@ -1,0 +1,141 @@
+package download;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.NodeList;
+import org.w3c.dom.Node;
+import org.xml.sax.InputSource;
+
+public class FileManager {
+
+    static void parseXML(String httpResponse) {
+        Document doc = convertStringToDocument(httpResponse);
+
+//        //debug only. remove this after a while.
+//        DOMSource source = new DOMSource(doc);
+//        FileWriter writer = null;
+//        try {
+//            writer = new FileWriter(new File("output.xml"));
+//        } catch (IOException ex) {
+//            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        StreamResult result = new StreamResult(writer);
+//
+//        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+//        Transformer transformer = null;
+//        try {
+//            transformer = transformerFactory.newTransformer();
+//        } catch (TransformerConfigurationException ex) {
+//            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        try {
+//            transformer.transform(source, result);
+//        } catch (TransformerException ex) {
+//            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        // each XML node entry should be a photo. caching the jpg and the metadata
+        NodeList nodeList = doc.getElementsByTagName("entry");
+        doc.getDocumentElement().normalize();
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nodeList.item(i);
+                String phid = null;
+                if (eElement.getElementsByTagName("id").getLength() == 1) {
+                    String wholeId = eElement.getElementsByTagName("id").item(0).getTextContent();
+                    phid = wholeId.substring(wholeId.lastIndexOf("/"), wholeId.length() - 1);
+
+                    writeMetaData(node.cloneNode(true), phid); //use the photo id to uniquely identify the photo metadata
+                }
+                //this return at least two nodes type link. check which one has type="image/jpeg"
+                NodeList jpgs = eElement.getElementsByTagName("link");
+                for(int k=0;k<jpgs.getLength(); k++)
+                {
+                    Node nodeJPG = jpgs.item(k);
+                    if (nodeJPG.getNodeType() == Node.ELEMENT_NODE) {
+                        Element elemJPG = (Element) jpgs.item(k);
+                        if(elemJPG.getAttribute("type") != null && elemJPG.getAttribute("type").contains("jpeg"))
+                        {
+                            //download image
+                            Network.downloadImage(elemJPG.getAttribute("href"),"cache/" + phid + ".jpg");
+                        }
+                    }
+                }
+                    
+                
+            }
+        }
+    }
+
+    private static void writeMetaData(Node n, String uniqueID) {
+        File check = new File("cache/metadata/" + uniqueID + ".xml");
+        if(check.exists()) return;
+        
+        DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder docBuilder = null;
+        try {
+            docBuilder = docFactory.newDocumentBuilder();
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        Document saveDoc = docBuilder.newDocument();
+
+        //saveDoc.importNode(n, true);
+        Element rootElement = saveDoc.createElement("feed");
+        saveDoc.appendChild(rootElement);
+
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = null;
+        try {
+            transformer = transformerFactory.newTransformer();
+        } catch (TransformerConfigurationException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        DOMSource source = new DOMSource(saveDoc);
+        StreamResult result = new StreamResult(new File("cache/metadata/" + uniqueID + ".xml"));
+
+        try {
+            transformer.transform(source, result);
+        } catch (TransformerException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
+    private static Document convertStringToDocument(String xmlStr) {
+        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder;
+        try {
+            builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(new InputSource(new StringReader(xmlStr)));
+            return doc;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+}
