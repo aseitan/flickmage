@@ -71,28 +71,26 @@ public class FileManager {
                 }
                 //this return at least two nodes type link. check which one has type="image/jpeg"
                 NodeList jpgs = eElement.getElementsByTagName("link");
-                for(int k=0;k<jpgs.getLength(); k++)
-                {
+                for (int k = 0; k < jpgs.getLength(); k++) {
                     Node nodeJPG = jpgs.item(k);
                     if (nodeJPG.getNodeType() == Node.ELEMENT_NODE) {
                         Element elemJPG = (Element) jpgs.item(k);
-                        if(elemJPG.getAttribute("type") != null && elemJPG.getAttribute("type").contains("jpeg"))
-                        {
+                        if (elemJPG.getAttribute("type") != null && elemJPG.getAttribute("type").contains("jpeg")) {
                             //download image
-                            Network.downloadImage(elemJPG.getAttribute("href"),"cache/" + phid + ".jpg");
+                            Network.downloadImage(elemJPG.getAttribute("href"), "cache/" + phid + ".jpg");
                         }
                     }
                 }
-                    
-                
             }
         }
     }
 
     private static void writeMetaData(Node n, String uniqueID) {
         File check = new File("cache/metadata/" + uniqueID + ".xml");
-        if(check.exists()) return;
-        
+        if (check.exists()) {
+            return;
+        }
+
         DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
         DocumentBuilder docBuilder = null;
         try {
@@ -103,10 +101,15 @@ public class FileManager {
 
         Document saveDoc = docBuilder.newDocument();
 
-        //saveDoc.importNode(n, true);
+        //manually add the "feed" node since the initial info it carried it not useful anymore
         Element rootElement = saveDoc.createElement("feed");
         saveDoc.appendChild(rootElement);
 
+        //save full entry in case other info is needed to META
+        if (n != null) {
+            saveDoc.adoptNode(n);
+            saveDoc.getDocumentElement().appendChild(n);
+        }
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = null;
         try {
@@ -122,7 +125,6 @@ public class FileManager {
         } catch (TransformerException ex) {
             Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }
 
     private static Document convertStringToDocument(String xmlStr) {
