@@ -1,35 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package flickmage;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.TilePane;
 
-/**
- *
- * @author Seitan
- */
 public class FXMLDocumentController implements Initializable {
     
     @FXML
     private Label label;
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }
+    private TilePane imageContainer;
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+    public void initialize(URL url, ResourceBundle rb)
+    {
+        String path = "cache/";
+        File folder = new File(path);
+        File[] listOfFiles = folder.listFiles();
+
+        if(imageContainer != null )
+        {
+            for (final File file : listOfFiles) {
+                
+                Image image = null;
+                try {
+                    image = new Image(new FileInputStream(file), 150, 0, true, true);
+                } catch (FileNotFoundException ex) {
+                    Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+                ImageView imageView = new ImageView(image);
+                imageContainer.getChildren().add(imageView);
+            }
+        }
     }    
     
 }
