@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classutils_1_1_custom_logger" kind="class" language="Java" prot="public">
+    <compoundname>utils::CustomLogger</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classutils_1_1_custom_logger_1aa8248e9f0aff7d2bac9835e18a936a8e" prot="public" static="yes" mutable="no">
+        <type>Logger</type>
+        <definition>Logger utils.CustomLogger.logger</definition>
+        <argsstring></argsstring>
+        <name>logger</name>
+        <initializer>= Logger.getLogger( CustomLogger.class.getName() )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/utils/CustomLogger.java" line="7" column="1" bodyfile="E:/Git/flickmage/flickmage/src/utils/CustomLogger.java" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>utils.CustomLogger</label>
+        <link refid="classutils_1_1_custom_logger"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>logger</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Logger</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Git/flickmage/flickmage/src/utils/CustomLogger.java" line="5" column="1" bodyfile="E:/Git/flickmage/flickmage/src/utils/CustomLogger.java" bodystart="5" bodyend="8"/>
+    <listofallmembers>
+      <member refid="classutils_1_1_custom_logger_1aa8248e9f0aff7d2bac9835e18a936a8e" prot="public" virt="non-virtual"><scope>utils::CustomLogger</scope><name>logger</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

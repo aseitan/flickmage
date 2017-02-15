@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classnetworking_1_1_network" kind="class" language="Java" prot="public">
+    <compoundname>networking::Network</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnetworking_1_1_network_1afb5ec2139d3b7a3cc2824254ebe5367d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String networking.Network.sendHTTPGet</definition>
+        <argsstring>(String usedURL)</argsstring>
+        <name>sendHTTPGet</name>
+        <param>
+          <type>String</type>
+          <declname>usedURL</declname>
+        </param>
+        <exceptions> throws IOException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/Network.java" line="28" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/Network.java" bodystart="28" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classnetworking_1_1_network_1ad693a1fe798283ca729b2e163ef8c5ff" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void networking.Network.downloadImage</definition>
+        <argsstring>(String url, String fileName)</argsstring>
+        <name>downloadImage</name>
+        <param>
+          <type>String</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/Network.java" line="64" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/Network.java" bodystart="64" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classnetworking_1_1_network" kindref="compound">Network</ref> class used to send http requests and downloading image from URL.</para><para><simplesect kind="author"><para>Seitan </para></simplesect>
+</para>    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/networking/Network.java" line="26" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/Network.java" bodystart="26" bodyend="81"/>
+    <listofallmembers>
+      <member refid="classnetworking_1_1_network_1ad693a1fe798283ca729b2e163ef8c5ff" prot="public" virt="non-virtual"><scope>networking::Network</scope><name>downloadImage</name></member>
+      <member refid="classnetworking_1_1_network_1afb5ec2139d3b7a3cc2824254ebe5367d" prot="public" virt="non-virtual"><scope>networking::Network</scope><name>sendHTTPGet</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

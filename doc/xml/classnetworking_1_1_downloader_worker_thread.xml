@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classnetworking_1_1_downloader_worker_thread" kind="class" language="Java" prot="public">
+    <compoundname>networking::DownloaderWorkerThread</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">javax::swing::SwingWorker&lt; Boolean, Void &gt;</basecompoundref>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classnetworking_1_1_downloader_worker_thread_1ae4d11c7d9f9d03579b93d8ae4c48effd" prot="package" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String networking.DownloaderWorkerThread.url</definition>
+        <argsstring></argsstring>
+        <name>url</name>
+        <initializer>= &quot;https://api.flickr.com/services/feeds/photos_public.gne&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="17" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetworking_1_1_downloader_worker_thread_1a9fa83bcd678720e5493d92672952b2a6" prot="package" static="no" mutable="no">
+        <type>final String</type>
+        <definition>final String networking.DownloaderWorkerThread.urlWithTag</definition>
+        <argsstring></argsstring>
+        <name>urlWithTag</name>
+        <initializer>= &quot;https://api.flickr.com/services/feeds/photos_public.gne?tags=&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="18" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetworking_1_1_downloader_worker_thread_1a6fe1d4562f27533f286110ac5738859d" prot="package" static="no" mutable="no">
+        <type>String</type>
+        <definition>String networking.DownloaderWorkerThread.tag</definition>
+        <argsstring></argsstring>
+        <name>tag</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="19" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnetworking_1_1_downloader_worker_thread_1a71b3033821c8e626bef37d7c6b03a841" prot="package" static="no" mutable="no">
+        <type>Vector&lt; String &gt;</type>
+        <definition>Vector&lt;String&gt; networking.DownloaderWorkerThread.entryIDs</definition>
+        <argsstring></argsstring>
+        <name>entryIDs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="20" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classnetworking_1_1_downloader_worker_thread_1ae9a77133f612699e216af1c5799193f4" prot="public" static="no" mutable="no">
+        <type>Boolean</type>
+        <definition>Boolean networking.DownloaderWorkerThread.isWorking</definition>
+        <argsstring></argsstring>
+        <name>isWorking</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="22" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classnetworking_1_1_downloader_worker_thread_1a4f6d9895bf0a41ebf55cea8bce5a1760" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Boolean</type>
+        <definition>Boolean networking.DownloaderWorkerThread.doInBackground</definition>
+        <argsstring>()</argsstring>
+        <name>doInBackground</name>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="25" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="25" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classnetworking_1_1_downloader_worker_thread_1a708bbc3240419f70d32b8e3751ddbed6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void networking.DownloaderWorkerThread.done</definition>
+        <argsstring>()</argsstring>
+        <name>done</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="46" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="46" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnetworking_1_1_downloader_worker_thread_1aff7a9d09e6056d90fdf53eab57c6d95b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void networking.DownloaderWorkerThread.setTag</definition>
+        <argsstring>(String t)</argsstring>
+        <name>setTag</name>
+        <param>
+          <type>String</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="50" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="50" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Worker thread used for async operations (non-UI actions): http calls, downloading images, text parsing, etc</para><para><simplesect kind="author"><para>Seitan </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>networking.DownloaderWorkerThread</label>
+        <link refid="classnetworking_1_1_downloader_worker_thread"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>javax::swing::SwingWorker&lt; Boolean, Void &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>networking.DownloaderWorkerThread</label>
+        <link refid="classnetworking_1_1_downloader_worker_thread"/>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>entryIDs</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Vector&lt; String &gt;</label>
+      </node>
+      <node id="6">
+        <label>javax::swing::SwingWorker&lt; Boolean, Void &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="15" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" bodystart="15" bodyend="53"/>
+    <listofallmembers>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1a4f6d9895bf0a41ebf55cea8bce5a1760" prot="protected" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>doInBackground</name></member>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1a708bbc3240419f70d32b8e3751ddbed6" prot="protected" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>done</name></member>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1a71b3033821c8e626bef37d7c6b03a841" prot="package" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>entryIDs</name></member>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1ae9a77133f612699e216af1c5799193f4" prot="public" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>isWorking</name></member>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1aff7a9d09e6056d90fdf53eab57c6d95b" prot="public" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>setTag</name></member>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1a6fe1d4562f27533f286110ac5738859d" prot="package" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>tag</name></member>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1ae4d11c7d9f9d03579b93d8ae4c48effd" prot="package" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>url</name></member>
+      <member refid="classnetworking_1_1_downloader_worker_thread_1a9fa83bcd678720e5493d92672952b2a6" prot="package" virt="non-virtual"><scope>networking::DownloaderWorkerThread</scope><name>urlWithTag</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

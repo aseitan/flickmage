@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classutils_1_1_custom_logger" kind="class"><name>utils::CustomLogger</name>
+    <member refid="classutils_1_1_custom_logger_1aa8248e9f0aff7d2bac9835e18a936a8e" kind="variable"><name>logger</name></member>
+  </compound>
+  <compound refid="classnetworking_1_1_downloader_worker_thread" kind="class"><name>networking::DownloaderWorkerThread</name>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1ae4d11c7d9f9d03579b93d8ae4c48effd" kind="variable"><name>url</name></member>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1a9fa83bcd678720e5493d92672952b2a6" kind="variable"><name>urlWithTag</name></member>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1a6fe1d4562f27533f286110ac5738859d" kind="variable"><name>tag</name></member>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1a71b3033821c8e626bef37d7c6b03a841" kind="variable"><name>entryIDs</name></member>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1ae9a77133f612699e216af1c5799193f4" kind="variable"><name>isWorking</name></member>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1a4f6d9895bf0a41ebf55cea8bce5a1760" kind="function"><name>doInBackground</name></member>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1a708bbc3240419f70d32b8e3751ddbed6" kind="function"><name>done</name></member>
+    <member refid="classnetworking_1_1_downloader_worker_thread_1aff7a9d09e6056d90fdf53eab57c6d95b" kind="function"><name>setTag</name></member>
+  </compound>
+  <compound refid="classnetworking_1_1_file_manager" kind="class"><name>networking::FileManager</name>
+    <member refid="classnetworking_1_1_file_manager_1aab209cc31818739581018b5b58a4a779" kind="function"><name>parseXML</name></member>
+    <member refid="classnetworking_1_1_file_manager_1a0e0aff9bc16126b138db757a60210121" kind="function"><name>writeMetaData</name></member>
+    <member refid="classnetworking_1_1_file_manager_1aba486cceaf21d95cb41c71b748cfba9d" kind="function"><name>convertStringToDocument</name></member>
+    <member refid="classnetworking_1_1_file_manager_1a1c892cd30b7487eb033201d4e647cc07" kind="function"><name>fillData</name></member>
+  </compound>
+  <compound refid="classflickmage_1_1_flick_mage" kind="class"><name>flickmage::FlickMage</name>
+    <member refid="classflickmage_1_1_flick_mage_1a8363dd0436b34f122b71e5c15edc5840" kind="function"><name>start</name></member>
+    <member refid="classflickmage_1_1_flick_mage_1afc9f1545bdc4dc5d2994864cc06dd913" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="classflickmage_1_1_f_x_m_l_document_controller" kind="class"><name>flickmage::FXMLDocumentController</name>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a70df678519d2ac9c7b65e6b34ccda8f0" kind="variable"><name>ImageContainerPane</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a948f544534fdd478014286f681c85888" kind="variable"><name>SearchByTagButton</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a9786649fd7513563cad6b5190f4ef8bb" kind="variable"><name>TagTextField</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a2b8248f9d0959a09342c6d6139681408" kind="variable"><name>LoadingCircle</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a00873e74523caa1cbc34375370b06f7e" kind="variable"><name>DetailsTextArea</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a345e0ae9c967968796c4d74b5bbdffbc" kind="variable"><name>LogoImage</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a051027027d7d5d4007c485842bdaa69a" kind="function"><name>initialize</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a6c26b2529b5e586cd1b3776135d44691" kind="function"><name>SetDownloadStatusDone</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1ad7b99cf03595a41881df5e8851ccc249" kind="function"><name>SearchByTag</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a8dea849d9a50b116a2372d82c5b76065" kind="function"><name>SortByDateTaked</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a916991d37f992f65c14822c6c65b2a5d" kind="function"><name>SortByDatePublished</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1ab06751356bea709450df6805dd2d5735" kind="function"><name>SaveFileToSystemGallery</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1ac499b3c67decc1c053b1ed9e5b942547" kind="function"><name>OpenFileInBrowser</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a7fe43543d1008b92d2e91b786d5fa331" kind="function"><name>ShareFileViaMail</name></member>
+    <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a59c76520c74c27546fc7edd2b616e72d" kind="function"><name>SearchButtonEnter</name></member>
+  </compound>
+  <compound refid="classui_1_1_image_view_wrapper" kind="class"><name>ui::ImageViewWrapper</name>
+    <member refid="classui_1_1_image_view_wrapper_1a3d9a7f12c67f75d079f9f5d21d16de7c" kind="variable"><name>takenDate</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a3892d0d79df37cc813d9705234bc67e2" kind="variable"><name>publishDate</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a591b594168bea62236523d8579d748e5" kind="variable"><name>id</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a826bad14ac688ef40eafaa9ae820f56f" kind="variable"><name>title</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a2d28323793d635ac42431ce028ed2b78" kind="variable"><name>imageView</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a4821bac9bc2289aa8941587fc685f37e" kind="variable"><name>pictureRegion</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1ad23bf70b0b01cc2ab7a761e1d517af18" kind="variable"><name>handler</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a20d1d9cda767df435a55efbd62e1c17b" kind="variable"><name>url</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1aae75b199bf9a1c82385338a235948a88" kind="variable"><name>dateFormat</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a97d70e6255fd97ecdff81ecfa4173814" kind="function"><name>ImageViewWrapper</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a72a8c2511777eb1845bc4ca448a403d0" kind="function"><name>getID</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1ae51b6289ccdc41f414d4f06b50ea2381" kind="function"><name>setURL</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1aaf945d43b325548e7c8f7089011abe06" kind="function"><name>getURL</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a321d95dd9ab138af479ddf3dd9a2e217" kind="function"><name>setTitle</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1aba5d6e805acec77d90278ddb8259d01c" kind="function"><name>getTitle</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a4257d4eb3821efd6e233d93a00db4d3f" kind="function"><name>setTakenDateFromString</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1af18d3bb739f06740b38b6e30c09883c9" kind="function"><name>getTakenDate</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a196df8d4de4148b258bbd03b763471ff" kind="function"><name>getTakenDateAsString</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1aa34eddf55d145e0ebccf8f38bc78d23c" kind="function"><name>getPublishDate</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1ad4eaf1626cf06c6ade49d003c30b2467" kind="function"><name>getPublishDateAsString</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1ad21352bf608dc853f8070c9b64b1bf5b" kind="function"><name>setPublishDateFromString</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1a51b1ea4d4ef61a7c0482390cdc960bfc" kind="function"><name>setSelected</name></member>
+    <member refid="classui_1_1_image_view_wrapper_1afcd7087578b153f44e1e8aca3fbd9c4d" kind="function"><name>setUnselected</name></member>
+  </compound>
+  <compound refid="classnetworking_1_1_network" kind="class"><name>networking::Network</name>
+    <member refid="classnetworking_1_1_network_1afb5ec2139d3b7a3cc2824254ebe5367d" kind="function"><name>sendHTTPGet</name></member>
+    <member refid="classnetworking_1_1_network_1ad693a1fe798283ca729b2e163ef8c5ff" kind="function"><name>downloadImage</name></member>
+  </compound>
+  <compound refid="classutils_1_1_o_s_specific" kind="class"><name>utils::OSSpecific</name>
+    <member refid="classutils_1_1_o_s_specific_1a5ea0754f6061d17e569184b89487efe2" kind="function"><name>openWebpage</name></member>
+    <member refid="classutils_1_1_o_s_specific_1ae9690273ec09d48253837545866a3082" kind="function"><name>openWebpage</name></member>
+    <member refid="classutils_1_1_o_s_specific_1a828ec74ec94dd4bce9ff7c61b8a5d932" kind="function"><name>copyFile</name></member>
+  </compound>
+  <compound refid="classui_1_1_publish_date_comparator" kind="class"><name>ui::PublishDateComparator</name>
+    <member refid="classui_1_1_publish_date_comparator_1a757be7877dedf63d6b69984235a8e670" kind="function"><name>compare</name></member>
+  </compound>
+  <compound refid="classui_1_1_taken_date_comparator" kind="class"><name>ui::TakenDateComparator</name>
+    <member refid="classui_1_1_taken_date_comparator_1aaad92fcdd0fb21b97d3e51ae38a51c31" kind="function"><name>compare</name></member>
+  </compound>
+  <compound refid="classnetworking_1_1_thread_manager" kind="class"><name>networking::ThreadManager</name>
+    <member refid="classnetworking_1_1_thread_manager_1a2464ac07f2228021b6c3e95787530dba" kind="variable"><name>workerThread</name></member>
+    <member refid="classnetworking_1_1_thread_manager_1abe89e25548971d163970a98772409eb7" kind="function"><name>executeWorkWithTag</name></member>
+    <member refid="classnetworking_1_1_thread_manager_1a222d3c467d91e8404c66861291c501b4" kind="function"><name>executeWork</name></member>
+  </compound>
+  <compound refid="classui_1_1_u_i_manager" kind="class"><name>ui::UIManager</name>
+    <member refid="classui_1_1_u_i_manager_1a1466fbe2857e20d64fc51ede0af5c587" kind="variable"><name>managerSingle</name></member>
+    <member refid="classui_1_1_u_i_manager_1a1552ef7a7907c0c6525b6742f3da54bf" kind="variable"><name>controller</name></member>
+    <member refid="classui_1_1_u_i_manager_1a00b4b34e294134ebcf303a18cb104bc3" kind="variable"><name>dataView</name></member>
+    <member refid="classui_1_1_u_i_manager_1ab6f86bbff25f63664b12212bc0a63c4c" kind="variable"><name>selectedItem</name></member>
+    <member refid="classui_1_1_u_i_manager_1a427061f2e04d1196398cc95601d848a7" kind="function"><name>UIManager</name></member>
+    <member refid="classui_1_1_u_i_manager_1a096ce77238e36eb87b2f01fd16647957" kind="function"><name>getInstance</name></member>
+    <member refid="classui_1_1_u_i_manager_1aed2cc54ef45f981faca4d00cb538afa1" kind="function"><name>initializeController</name></member>
+    <member refid="classui_1_1_u_i_manager_1a47fd6a654a77080c797d88db629211ce" kind="function"><name>downloadDone</name></member>
+    <member refid="classui_1_1_u_i_manager_1acf7a4acd7b092240dac9ae3859bd83c4" kind="function"><name>startDownloadByTag</name></member>
+    <member refid="classui_1_1_u_i_manager_1a303b74ba12a3c9f7f4377bdf87b269c7" kind="function"><name>startDownload</name></member>
+    <member refid="classui_1_1_u_i_manager_1a7376188b6f0686c52f53eb131b73c9ae" kind="function"><name>imageSelected</name></member>
+    <member refid="classui_1_1_u_i_manager_1ac5fd44443948e5433ee9adde237d7016" kind="function"><name>sortByDateTaken</name></member>
+    <member refid="classui_1_1_u_i_manager_1ac15d16183245b9252233ace99cb0870d" kind="function"><name>SaveFileToSystemGallery</name></member>
+    <member refid="classui_1_1_u_i_manager_1a867495b84eaad214816773a540532e00" kind="function"><name>OpenFileInBrowser</name></member>
+    <member refid="classui_1_1_u_i_manager_1a4c217d31e61c5423d5731f4b871da7e7" kind="function"><name>ShareFileViaMail</name></member>
+    <member refid="classui_1_1_u_i_manager_1afb9263cc9eed5cf493ffab651ee48878" kind="function"><name>loadImageFromWorkerThread</name></member>
+  </compound>
+  <compound refid="namespaceflickmage" kind="namespace"><name>flickmage</name>
+  </compound>
+  <compound refid="namespacenetworking" kind="namespace"><name>networking</name>
+  </compound>
+  <compound refid="namespaceui" kind="namespace"><name>ui</name>
+  </compound>
+  <compound refid="namespaceutils" kind="namespace"><name>utils</name>
+  </compound>
+  <compound refid="_flick_mage_8java" kind="file"><name>FlickMage.java</name>
+  </compound>
+  <compound refid="_f_x_m_l_document_controller_8java" kind="file"><name>FXMLDocumentController.java</name>
+  </compound>
+  <compound refid="_downloader_worker_thread_8java" kind="file"><name>DownloaderWorkerThread.java</name>
+  </compound>
+  <compound refid="_file_manager_8java" kind="file"><name>FileManager.java</name>
+  </compound>
+  <compound refid="_network_8java" kind="file"><name>Network.java</name>
+  </compound>
+  <compound refid="_thread_manager_8java" kind="file"><name>ThreadManager.java</name>
+  </compound>
+  <compound refid="_image_view_wrapper_8java" kind="file"><name>ImageViewWrapper.java</name>
+  </compound>
+  <compound refid="_u_i_manager_8java" kind="file"><name>UIManager.java</name>
+  </compound>
+  <compound refid="_custom_logger_8java" kind="file"><name>CustomLogger.java</name>
+  </compound>
+  <compound refid="_o_s_specific_8java" kind="file"><name>OSSpecific.java</name>
+  </compound>
+  <compound refid="dir_885cc87fac2d91e269af0a5a959fa5f6" kind="dir"><name>E:</name>
+  </compound>
+  <compound refid="dir_eefbe224dffc7d4f1621e5b30df51be0" kind="dir"><name>E:/Git/flickmage/flickmage</name>
+  </compound>
+  <compound refid="dir_d9b8f6f56c9c88087358004f84df11da" kind="dir"><name>E:/Git/flickmage</name>
+  </compound>
+  <compound refid="dir_57a59c06595f53b2b005e87d73692f72" kind="dir"><name>E:/Git/flickmage/flickmage/src/flickmage</name>
+  </compound>
+  <compound refid="dir_4d19590e409f561fdfd1a503d577fdf7" kind="dir"><name>E:/Git</name>
+  </compound>
+  <compound refid="dir_e6656f90fb2c23f39d7d12e08fc84260" kind="dir"><name>E:/Git/flickmage/flickmage/src/networking</name>
+  </compound>
+  <compound refid="dir_e517c1f7e64b80ee5c6a0924e37d0c36" kind="dir"><name>E:/Git/flickmage/flickmage/src</name>
+  </compound>
+  <compound refid="dir_6d46dffc605a8fc1d6e2abd0e7d6b63f" kind="dir"><name>E:/Git/flickmage/flickmage/src/ui</name>
+  </compound>
+  <compound refid="dir_b030f5f5405da94375ad303733d35638" kind="dir"><name>E:/Git/flickmage/flickmage/src/utils</name>
+  </compound>
+</doxygenindex>

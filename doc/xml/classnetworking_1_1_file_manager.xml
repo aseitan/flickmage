@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classnetworking_1_1_file_manager" kind="class" language="Java" prot="public">
+    <compoundname>networking::FileManager</compoundname>
+      <sectiondef kind="package-static-func">
+      <memberdef kind="function" id="classnetworking_1_1_file_manager_1aab209cc31818739581018b5b58a4a779" prot="package" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Vector&lt; String &gt;</type>
+        <definition>static Vector&lt;String&gt; networking.FileManager.parseXML</definition>
+        <argsstring>(String httpResponse)</argsstring>
+        <name>parseXML</name>
+        <param>
+          <type>String</type>
+          <declname>httpResponse</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/FileManager.java" line="37" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/FileManager.java" bodystart="37" bodyend="78"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classnetworking_1_1_file_manager_1a0e0aff9bc16126b138db757a60210121" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void networking.FileManager.writeMetaData</definition>
+        <argsstring>(Node n, String uniqueID)</argsstring>
+        <name>writeMetaData</name>
+        <param>
+          <type>Node</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>uniqueID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/FileManager.java" line="80" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/FileManager.java" bodystart="80" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classnetworking_1_1_file_manager_1aba486cceaf21d95cb41c71b748cfba9d" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Document</type>
+        <definition>static Document networking.FileManager.convertStringToDocument</definition>
+        <argsstring>(String xmlStr)</argsstring>
+        <name>convertStringToDocument</name>
+        <param>
+          <type>String</type>
+          <declname>xmlStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/FileManager.java" line="122" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/FileManager.java" bodystart="122" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnetworking_1_1_file_manager_1a1c892cd30b7487eb033201d4e647cc07" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void networking.FileManager.fillData</definition>
+        <argsstring>(String id, ImageViewWrapper viewWrapper)</argsstring>
+        <name>fillData</name>
+        <param>
+          <type>String</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type><ref refid="classui_1_1_image_view_wrapper" kindref="compound">ImageViewWrapper</ref></type>
+          <declname>viewWrapper</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/FileManager.java" line="135" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/FileManager.java" bodystart="135" bodyend="185"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classnetworking_1_1_file_manager" kindref="compound">FileManager</ref> - class used for parsing XML into DOM and DOM structures into XML files.</para><para><simplesect kind="author"><para>Seitan </para></simplesect>
+</para>    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/networking/FileManager.java" line="35" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/FileManager.java" bodystart="35" bodyend="186"/>
+    <listofallmembers>
+      <member refid="classnetworking_1_1_file_manager_1aba486cceaf21d95cb41c71b748cfba9d" prot="private" virt="non-virtual"><scope>networking::FileManager</scope><name>convertStringToDocument</name></member>
+      <member refid="classnetworking_1_1_file_manager_1a1c892cd30b7487eb033201d4e647cc07" prot="public" virt="non-virtual"><scope>networking::FileManager</scope><name>fillData</name></member>
+      <member refid="classnetworking_1_1_file_manager_1aab209cc31818739581018b5b58a4a779" prot="package" virt="non-virtual"><scope>networking::FileManager</scope><name>parseXML</name></member>
+      <member refid="classnetworking_1_1_file_manager_1a0e0aff9bc16126b138db757a60210121" prot="private" virt="non-virtual"><scope>networking::FileManager</scope><name>writeMetaData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

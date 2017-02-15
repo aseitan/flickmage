@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespaceutils" kind="namespace" language="Java">
+    <compoundname>utils</compoundname>
+    <innerclass refid="classutils_1_1_custom_logger" prot="public">utils::CustomLogger</innerclass>
+    <innerclass refid="classutils_1_1_o_s_specific" prot="public">utils::OSSpecific</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/utils/CustomLogger.java" line="1" column="1"/>
+  </compounddef>
+</doxygen>

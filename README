@@ -1,0 +1,19 @@
+***********************************************************************************
+FlickMage
+
+A javafx application(with a touch of swing) that offers Flickr image browsing and utility.
+
+Structure:
+	cache - this folder is used to cache downloaded images
+	cache/metadata - is used to store metadata of downloaded images
+	dist - application jar file
+	doc - doxygen generated documentation
+	resources/logo - logo images used within the application
+	src/ - sources code
+	
+Prequisites: Have an internet connection and java installed. 
+Usage: Browse for flickr using tags as search tool and clicking an image loads its metadata.
+The circle near the tag search box shows working status (yellow means busy, you know what green means).
+
+Enjoy!
+***********************************************************************************

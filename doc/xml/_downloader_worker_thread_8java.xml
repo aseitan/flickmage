@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_downloader_worker_thread_8java" kind="file" language="Java">
+    <compoundname>DownloaderWorkerThread.java</compoundname>
+    <innerclass refid="classnetworking_1_1_downloader_worker_thread" prot="public">networking::DownloaderWorkerThread</innerclass>
+    <innernamespace refid="namespacenetworking">networking</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacenetworking" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">networking;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.io.IOException;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Vector;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.logging.Level;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>javax.swing.SwingWorker;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespaceui" kindref="compound">ui</ref>.<ref refid="classui_1_1_u_i_manager" kindref="compound">UIManager</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/><ref refid="namespaceutils" kindref="compound">utils</ref>.<ref refid="classutils_1_1_custom_logger" kindref="compound">CustomLogger</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classnetworking_1_1_downloader_worker_thread" refkind="compound"><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classnetworking_1_1_downloader_worker_thread" kindref="compound">DownloaderWorkerThread</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>SwingWorker&lt;Boolean,<sp/>Void&gt;<sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/>url<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;https://api.flickr.com/services/feeds/photos_public.gne&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/>urlWithTag<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;https://api.flickr.com/services/feeds/photos_public.gne?tags=&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>String<sp/>tag<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>Vector&lt;String&gt;<sp/>entryIDs;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Boolean<sp/><ref refid="classnetworking_1_1_downloader_worker_thread_1ae9a77133f612699e216af1c5799193f4" kindref="member">isWorking</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/>Boolean<sp/><ref refid="classnetworking_1_1_downloader_worker_thread_1a4f6d9895bf0a41ebf55cea8bce5a1760" kindref="member">doInBackground</ref>()<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>Exception<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classutils_1_1_custom_logger" kindref="compound">CustomLogger</ref>.<ref refid="classutils_1_1_custom_logger_1aa8248e9f0aff7d2bac9835e18a936a8e" kindref="member">logger</ref>.log(Level.INFO,<sp/></highlight><highlight class="stringliteral">&quot;Started<sp/>data<sp/>downloading&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isWorking<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>usedURL<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tag.length()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usedURL<sp/>=<sp/>urlWithTag<sp/>+<sp/>tag;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>usedURL<sp/>=<sp/>url;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>entryIDs<sp/>=<sp/><ref refid="classnetworking_1_1_file_manager" kindref="compound">FileManager</ref>.parseXML(<ref refid="namespacenetworking" kindref="compound">networking</ref>.<ref refid="classnetworking_1_1_network" kindref="compound">Network</ref>.<ref refid="classnetworking_1_1_network_1afb5ec2139d3b7a3cc2824254ebe5367d" kindref="member">sendHTTPGet</ref>(usedURL));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(IOException<sp/>ex)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>java.util.logging.Logger.getLogger(<ref refid="classnetworking_1_1_downloader_worker_thread" kindref="compound">DownloaderWorkerThread</ref>.class.getName()).log(Level.SEVERE,<sp/>null,<sp/>ex);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classutils_1_1_custom_logger" kindref="compound">CustomLogger</ref>.<ref refid="classutils_1_1_custom_logger_1aa8248e9f0aff7d2bac9835e18a936a8e" kindref="member">logger</ref>.log(Level.INFO,<sp/></highlight><highlight class="stringliteral">&quot;Done<sp/>data<sp/>downloading<sp/>tag<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>tag);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isWorking<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>null;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnetworking_1_1_downloader_worker_thread_1a708bbc3240419f70d32b8e3751ddbed6" kindref="member">done</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classui_1_1_u_i_manager" kindref="compound">UIManager</ref>.<ref refid="classui_1_1_u_i_manager_1a096ce77238e36eb87b2f01fd16647957" kindref="member">getInstance</ref>().<ref refid="classui_1_1_u_i_manager_1a47fd6a654a77080c797d88db629211ce" kindref="member">downloadDone</ref>(entryIDs);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classnetworking_1_1_downloader_worker_thread_1aff7a9d09e6056d90fdf53eab57c6d95b" kindref="member">setTag</ref>(String<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tag<sp/>=<sp/>t;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classui_1_1_taken_date_comparator" kind="class" language="Java" prot="package">
+    <compoundname>ui::TakenDateComparator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">java::util::Comparator&lt; ImageViewWrapper &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classui_1_1_taken_date_comparator_1aaad92fcdd0fb21b97d3e51ae38a51c31" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ui.TakenDateComparator.compare</definition>
+        <argsstring>(ImageViewWrapper o1, ImageViewWrapper o2)</argsstring>
+        <name>compare</name>
+        <param>
+          <type><ref refid="classui_1_1_image_view_wrapper" kindref="compound">ImageViewWrapper</ref></type>
+          <declname>o1</declname>
+        </param>
+        <param>
+          <type><ref refid="classui_1_1_image_view_wrapper" kindref="compound">ImageViewWrapper</ref></type>
+          <declname>o2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/ImageViewWrapper.java" line="148" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/ImageViewWrapper.java" bodystart="148" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="38">
+        <label>ui.TakenDateComparator</label>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>java::util::Comparator&lt; ImageViewWrapper &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="40">
+        <label>ui.TakenDateComparator</label>
+        <childnode refid="41" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>java::util::Comparator&lt; ImageViewWrapper &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Git/flickmage/flickmage/src/ui/ImageViewWrapper.java" line="145" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/ImageViewWrapper.java" bodystart="145" bodyend="158"/>
+    <listofallmembers>
+      <member refid="classui_1_1_taken_date_comparator_1aaad92fcdd0fb21b97d3e51ae38a51c31" prot="public" virt="non-virtual"><scope>ui::TakenDateComparator</scope><name>compare</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

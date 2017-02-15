@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classflickmage_1_1_f_x_m_l_document_controller" kind="class" language="Java" prot="public">
+    <compoundname>flickmage::FXMLDocumentController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Initializable</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classflickmage_1_1_f_x_m_l_document_controller_1a70df678519d2ac9c7b65e6b34ccda8f0" prot="public" static="no" mutable="no">
+        <type>Pane</type>
+        <definition>Pane flickmage.FXMLDocumentController.ImageContainerPane</definition>
+        <argsstring></argsstring>
+        <name>ImageContainerPane</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="29" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classflickmage_1_1_f_x_m_l_document_controller_1a948f544534fdd478014286f681c85888" prot="public" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button flickmage.FXMLDocumentController.SearchByTagButton</definition>
+        <argsstring></argsstring>
+        <name>SearchByTagButton</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="31" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classflickmage_1_1_f_x_m_l_document_controller_1a9786649fd7513563cad6b5190f4ef8bb" prot="public" static="no" mutable="no">
+        <type>TextField</type>
+        <definition>TextField flickmage.FXMLDocumentController.TagTextField</definition>
+        <argsstring></argsstring>
+        <name>TagTextField</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="33" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classflickmage_1_1_f_x_m_l_document_controller_1a2b8248f9d0959a09342c6d6139681408" prot="public" static="no" mutable="no">
+        <type>Circle</type>
+        <definition>Circle flickmage.FXMLDocumentController.LoadingCircle</definition>
+        <argsstring></argsstring>
+        <name>LoadingCircle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="35" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classflickmage_1_1_f_x_m_l_document_controller_1a00873e74523caa1cbc34375370b06f7e" prot="public" static="no" mutable="no">
+        <type>TextArea</type>
+        <definition>TextArea flickmage.FXMLDocumentController.DetailsTextArea</definition>
+        <argsstring></argsstring>
+        <name>DetailsTextArea</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="37" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classflickmage_1_1_f_x_m_l_document_controller_1a345e0ae9c967968796c4d74b5bbdffbc" prot="public" static="no" mutable="no">
+        <type>ImageView</type>
+        <definition>ImageView flickmage.FXMLDocumentController.LogoImage</definition>
+        <argsstring></argsstring>
+        <name>LogoImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="39" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1a051027027d7d5d4007c485842bdaa69a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.initialize</definition>
+        <argsstring>(URL url, ResourceBundle rb)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>URL</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>ResourceBundle</type>
+          <declname>rb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="42" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="42" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1a6c26b2529b5e586cd1b3776135d44691" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.SetDownloadStatusDone</definition>
+        <argsstring>(int done)</argsstring>
+        <name>SetDownloadStatusDone</name>
+        <param>
+          <type>int</type>
+          <declname>done</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="75" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="75" bodyend="84"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1ad7b99cf03595a41881df5e8851ccc249" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.SearchByTag</definition>
+        <argsstring>(ActionEvent event)</argsstring>
+        <name>SearchByTag</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="52" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="52" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1a8dea849d9a50b116a2372d82c5b76065" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.SortByDateTaked</definition>
+        <argsstring>(ActionEvent event)</argsstring>
+        <name>SortByDateTaked</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="64" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1a916991d37f992f65c14822c6c65b2a5d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.SortByDatePublished</definition>
+        <argsstring>(ActionEvent event)</argsstring>
+        <name>SortByDatePublished</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="70" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="70" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1ab06751356bea709450df6805dd2d5735" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.SaveFileToSystemGallery</definition>
+        <argsstring>(ActionEvent event)</argsstring>
+        <name>SaveFileToSystemGallery</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="87" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="87" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1ac499b3c67decc1c053b1ed9e5b942547" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.OpenFileInBrowser</definition>
+        <argsstring>(ActionEvent event)</argsstring>
+        <name>OpenFileInBrowser</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="93" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1a7fe43543d1008b92d2e91b786d5fa331" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.ShareFileViaMail</definition>
+        <argsstring>(ActionEvent event)</argsstring>
+        <name>ShareFileViaMail</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="99" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="99" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classflickmage_1_1_f_x_m_l_document_controller_1a59c76520c74c27546fc7edd2b616e72d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void flickmage.FXMLDocumentController.SearchButtonEnter</definition>
+        <argsstring>(ActionEvent ae)</argsstring>
+        <name>SearchButtonEnter</name>
+        <param>
+          <type>ActionEvent</type>
+          <declname>ae</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="105" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="105" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Main class controller for UI items</para><para><simplesect kind="author"><para>Seitan </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="14">
+        <label>flickmage.FXMLDocumentController</label>
+        <link refid="classflickmage_1_1_f_x_m_l_document_controller"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Initializable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>TextField</label>
+      </node>
+      <node id="18">
+        <label>Pane</label>
+      </node>
+      <node id="21">
+        <label>Button</label>
+      </node>
+      <node id="16">
+        <label>flickmage.FXMLDocumentController</label>
+        <link refid="classflickmage_1_1_f_x_m_l_document_controller"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>ImageContainerPane</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>TagTextField</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>LogoImage</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>SearchByTagButton</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>DetailsTextArea</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>LoadingCircle</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Circle</label>
+      </node>
+      <node id="22">
+        <label>TextArea</label>
+      </node>
+      <node id="17">
+        <label>Initializable</label>
+      </node>
+      <node id="20">
+        <label>ImageView</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" line="26" column="1" bodyfile="E:/Git/flickmage/flickmage/src/flickmage/FXMLDocumentController.java" bodystart="26" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a00873e74523caa1cbc34375370b06f7e" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>DetailsTextArea</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a70df678519d2ac9c7b65e6b34ccda8f0" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>ImageContainerPane</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a051027027d7d5d4007c485842bdaa69a" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>initialize</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a2b8248f9d0959a09342c6d6139681408" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>LoadingCircle</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a345e0ae9c967968796c4d74b5bbdffbc" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>LogoImage</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1ac499b3c67decc1c053b1ed9e5b942547" prot="private" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>OpenFileInBrowser</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1ab06751356bea709450df6805dd2d5735" prot="private" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>SaveFileToSystemGallery</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a59c76520c74c27546fc7edd2b616e72d" prot="private" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>SearchButtonEnter</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1ad7b99cf03595a41881df5e8851ccc249" prot="private" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>SearchByTag</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a948f544534fdd478014286f681c85888" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>SearchByTagButton</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a6c26b2529b5e586cd1b3776135d44691" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>SetDownloadStatusDone</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a7fe43543d1008b92d2e91b786d5fa331" prot="private" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>ShareFileViaMail</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a916991d37f992f65c14822c6c65b2a5d" prot="private" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>SortByDatePublished</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a8dea849d9a50b116a2372d82c5b76065" prot="private" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>SortByDateTaked</name></member>
+      <member refid="classflickmage_1_1_f_x_m_l_document_controller_1a9786649fd7513563cad6b5190f4ef8bb" prot="public" virt="non-virtual"><scope>flickmage::FXMLDocumentController</scope><name>TagTextField</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

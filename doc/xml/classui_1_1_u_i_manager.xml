@@ -1,0 +1,370 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classui_1_1_u_i_manager" kind="class" language="Java" prot="public">
+    <compoundname>ui::UIManager</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classui_1_1_u_i_manager_1a1466fbe2857e20d64fc51ede0af5c587" prot="private" static="yes" mutable="no">
+        <type><ref refid="classui_1_1_u_i_manager" kindref="compound">UIManager</ref></type>
+        <definition>UIManager ui.UIManager.managerSingle</definition>
+        <argsstring></argsstring>
+        <name>managerSingle</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="32" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classui_1_1_u_i_manager_1a1552ef7a7907c0c6525b6742f3da54bf" prot="package" static="no" mutable="no">
+        <type><ref refid="classflickmage_1_1_f_x_m_l_document_controller" kindref="compound">FXMLDocumentController</ref></type>
+        <definition>FXMLDocumentController ui.UIManager.controller</definition>
+        <argsstring></argsstring>
+        <name>controller</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="33" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classui_1_1_u_i_manager_1a00b4b34e294134ebcf303a18cb104bc3" prot="package" static="no" mutable="no">
+        <type>ArrayList&lt; <ref refid="classui_1_1_image_view_wrapper" kindref="compound">ImageViewWrapper</ref> &gt;</type>
+        <definition>ArrayList&lt;ImageViewWrapper&gt; ui.UIManager.dataView</definition>
+        <argsstring></argsstring>
+        <name>dataView</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="34" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classui_1_1_u_i_manager_1ab6f86bbff25f63664b12212bc0a63c4c" prot="package" static="no" mutable="no">
+        <type><ref refid="classui_1_1_image_view_wrapper" kindref="compound">ImageViewWrapper</ref></type>
+        <definition>ImageViewWrapper ui.UIManager.selectedItem</definition>
+        <argsstring></argsstring>
+        <name>selectedItem</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="35" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1a427061f2e04d1196398cc95601d848a7" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ui.UIManager.UIManager</definition>
+        <argsstring>()</argsstring>
+        <name>UIManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="37" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="37" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1a096ce77238e36eb87b2f01fd16647957" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classui_1_1_u_i_manager" kindref="compound">UIManager</ref></type>
+        <definition>static UIManager ui.UIManager.getInstance</definition>
+        <argsstring>()</argsstring>
+        <name>getInstance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="41" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="41" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1aed2cc54ef45f981faca4d00cb538afa1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.initializeController</definition>
+        <argsstring>(FXMLDocumentController c)</argsstring>
+        <name>initializeController</name>
+        <param>
+          <type><ref refid="classflickmage_1_1_f_x_m_l_document_controller" kindref="compound">FXMLDocumentController</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="48" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="48" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1a47fd6a654a77080c797d88db629211ce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.downloadDone</definition>
+        <argsstring>(Vector&lt; String &gt; ids)</argsstring>
+        <name>downloadDone</name>
+        <param>
+          <type>Vector&lt; String &gt;</type>
+          <declname>ids</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="117" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="117" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1acf7a4acd7b092240dac9ae3859bd83c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.startDownloadByTag</definition>
+        <argsstring>(String tag)</argsstring>
+        <name>startDownloadByTag</name>
+        <param>
+          <type>String</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="125" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="125" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1a303b74ba12a3c9f7f4377bdf87b269c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.startDownload</definition>
+        <argsstring>()</argsstring>
+        <name>startDownload</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="136" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="136" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1a7376188b6f0686c52f53eb131b73c9ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.imageSelected</definition>
+        <argsstring>(ImageViewWrapper wr)</argsstring>
+        <name>imageSelected</name>
+        <param>
+          <type><ref refid="classui_1_1_image_view_wrapper" kindref="compound">ImageViewWrapper</ref></type>
+          <declname>wr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="143" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="143" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1ac5fd44443948e5433ee9adde237d7016" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.sortByDateTaken</definition>
+        <argsstring>(Boolean b)</argsstring>
+        <name>sortByDateTaken</name>
+        <param>
+          <type>Boolean</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="155" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="155" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1ac15d16183245b9252233ace99cb0870d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.SaveFileToSystemGallery</definition>
+        <argsstring>()</argsstring>
+        <name>SaveFileToSystemGallery</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="175" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="175" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1a867495b84eaad214816773a540532e00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.OpenFileInBrowser</definition>
+        <argsstring>()</argsstring>
+        <name>OpenFileInBrowser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="200" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="200" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1a4c217d31e61c5423d5731f4b871da7e7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.ShareFileViaMail</definition>
+        <argsstring>()</argsstring>
+        <name>ShareFileViaMail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="213" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="213" bodyend="217"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classui_1_1_u_i_manager_1afb9263cc9eed5cf493ffab651ee48878" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ui.UIManager.loadImageFromWorkerThread</definition>
+        <argsstring>(Vector&lt; String &gt; ids, Boolean fromWorkerThread)</argsstring>
+        <name>loadImageFromWorkerThread</name>
+        <param>
+          <type>Vector&lt; String &gt;</type>
+          <declname>ids</declname>
+        </param>
+        <param>
+          <type>Boolean</type>
+          <declname>fromWorkerThread</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="52" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="52" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classui_1_1_u_i_manager" kindref="compound">UIManager</ref> - big class used to updated UI logic and to manage connection to worker thread.</para><para><simplesect kind="author"><para>Seitan </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="52">
+        <label>TextField</label>
+      </node>
+      <node id="48">
+        <label>ui.UIManager</label>
+        <link refid="classui_1_1_u_i_manager"/>
+        <childnode refid="49" relation="usage">
+          <edgelabel>controller</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>selectedItem</edgelabel>
+        </childnode>
+        <childnode refid="61" relation="usage">
+          <edgelabel>dataView</edgelabel>
+        </childnode>
+      </node>
+      <node id="57">
+        <label>ui.ImageViewWrapper</label>
+        <link refid="classui_1_1_image_view_wrapper"/>
+        <childnode refid="58" relation="usage">
+          <edgelabel>handler</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>imageView</edgelabel>
+        </childnode>
+        <childnode refid="59" relation="usage">
+          <edgelabel>pictureRegion</edgelabel>
+        </childnode>
+        <childnode refid="60" relation="usage">
+          <edgelabel>takenDate</edgelabel>
+          <edgelabel>publishDate</edgelabel>
+        </childnode>
+      </node>
+      <node id="51">
+        <label>Pane</label>
+      </node>
+      <node id="58">
+        <label>EventHandler</label>
+      </node>
+      <node id="54">
+        <label>Button</label>
+      </node>
+      <node id="49">
+        <label>flickmage.FXMLDocumentController</label>
+        <link refid="classflickmage_1_1_f_x_m_l_document_controller"/>
+        <childnode refid="50" relation="public-inheritance">
+        </childnode>
+        <childnode refid="51" relation="usage">
+          <edgelabel>ImageContainerPane</edgelabel>
+        </childnode>
+        <childnode refid="52" relation="usage">
+          <edgelabel>TagTextField</edgelabel>
+        </childnode>
+        <childnode refid="53" relation="usage">
+          <edgelabel>LogoImage</edgelabel>
+        </childnode>
+        <childnode refid="54" relation="usage">
+          <edgelabel>SearchByTagButton</edgelabel>
+        </childnode>
+        <childnode refid="55" relation="usage">
+          <edgelabel>DetailsTextArea</edgelabel>
+        </childnode>
+        <childnode refid="56" relation="usage">
+          <edgelabel>LoadingCircle</edgelabel>
+        </childnode>
+      </node>
+      <node id="56">
+        <label>Circle</label>
+      </node>
+      <node id="55">
+        <label>TextArea</label>
+      </node>
+      <node id="60">
+        <label>Date</label>
+      </node>
+      <node id="61">
+        <label>ArrayList&lt; ui.ImageViewWrapper &gt;</label>
+      </node>
+      <node id="50">
+        <label>Initializable</label>
+      </node>
+      <node id="59">
+        <label>HBox</label>
+      </node>
+      <node id="53">
+        <label>ImageView</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Git/flickmage/flickmage/src/ui/UIManager.java" line="30" column="1" bodyfile="E:/Git/flickmage/flickmage/src/ui/UIManager.java" bodystart="30" bodyend="218"/>
+    <listofallmembers>
+      <member refid="classui_1_1_u_i_manager_1a1552ef7a7907c0c6525b6742f3da54bf" prot="package" virt="non-virtual"><scope>ui::UIManager</scope><name>controller</name></member>
+      <member refid="classui_1_1_u_i_manager_1a00b4b34e294134ebcf303a18cb104bc3" prot="package" virt="non-virtual"><scope>ui::UIManager</scope><name>dataView</name></member>
+      <member refid="classui_1_1_u_i_manager_1a47fd6a654a77080c797d88db629211ce" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>downloadDone</name></member>
+      <member refid="classui_1_1_u_i_manager_1a096ce77238e36eb87b2f01fd16647957" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>getInstance</name></member>
+      <member refid="classui_1_1_u_i_manager_1a7376188b6f0686c52f53eb131b73c9ae" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>imageSelected</name></member>
+      <member refid="classui_1_1_u_i_manager_1aed2cc54ef45f981faca4d00cb538afa1" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>initializeController</name></member>
+      <member refid="classui_1_1_u_i_manager_1afb9263cc9eed5cf493ffab651ee48878" prot="private" virt="non-virtual"><scope>ui::UIManager</scope><name>loadImageFromWorkerThread</name></member>
+      <member refid="classui_1_1_u_i_manager_1a1466fbe2857e20d64fc51ede0af5c587" prot="private" virt="non-virtual"><scope>ui::UIManager</scope><name>managerSingle</name></member>
+      <member refid="classui_1_1_u_i_manager_1a867495b84eaad214816773a540532e00" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>OpenFileInBrowser</name></member>
+      <member refid="classui_1_1_u_i_manager_1ac15d16183245b9252233ace99cb0870d" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>SaveFileToSystemGallery</name></member>
+      <member refid="classui_1_1_u_i_manager_1ab6f86bbff25f63664b12212bc0a63c4c" prot="package" virt="non-virtual"><scope>ui::UIManager</scope><name>selectedItem</name></member>
+      <member refid="classui_1_1_u_i_manager_1a4c217d31e61c5423d5731f4b871da7e7" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>ShareFileViaMail</name></member>
+      <member refid="classui_1_1_u_i_manager_1ac5fd44443948e5433ee9adde237d7016" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>sortByDateTaken</name></member>
+      <member refid="classui_1_1_u_i_manager_1a303b74ba12a3c9f7f4377bdf87b269c7" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>startDownload</name></member>
+      <member refid="classui_1_1_u_i_manager_1acf7a4acd7b092240dac9ae3859bd83c4" prot="public" virt="non-virtual"><scope>ui::UIManager</scope><name>startDownloadByTag</name></member>
+      <member refid="classui_1_1_u_i_manager_1a427061f2e04d1196398cc95601d848a7" prot="protected" virt="non-virtual"><scope>ui::UIManager</scope><name>UIManager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

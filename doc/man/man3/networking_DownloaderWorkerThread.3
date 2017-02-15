@@ -1,0 +1,60 @@
+.TH "networking.DownloaderWorkerThread" 3 "Thu Feb 16 2017" "FlickMage" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+networking.DownloaderWorkerThread
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits SwingWorker< Boolean, Void >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetTag\fP (String t)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Boolean \fBisWorking\fP = false"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "Boolean \fBdoInBackground\fP ()  throws Exception "
+.br
+.ti -1c
+.RI "void \fBdone\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Worker thread used for async operations (non-UI actions): http calls, downloading images, text parsing, etc
+.PP
+\fBAuthor:\fP
+.RS 4
+Seitan 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "Boolean networking\&.DownloaderWorkerThread\&.doInBackground () throws Exception\fC [protected]\fP"
+
+.SS "void networking\&.DownloaderWorkerThread\&.done ()\fC [protected]\fP"
+
+.SS "void networking\&.DownloaderWorkerThread\&.setTag (String t)"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "Boolean networking\&.DownloaderWorkerThread\&.isWorking = false"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for FlickMage from the source code\&.

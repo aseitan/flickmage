@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_d9b8f6f56c9c88087358004f84df11da" kind="dir">
+    <compoundname>E:/Git/flickmage</compoundname>
+    <innerdir refid="dir_eefbe224dffc7d4f1621e5b30df51be0">E:/Git/flickmage/flickmage</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Git/flickmage/"/>
+  </compounddef>
+</doxygen>

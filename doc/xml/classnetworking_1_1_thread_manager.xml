@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classnetworking_1_1_thread_manager" kind="class" language="Java" prot="public">
+    <compoundname>networking::ThreadManager</compoundname>
+      <sectiondef kind="package-static-attrib">
+      <memberdef kind="variable" id="classnetworking_1_1_thread_manager_1a2464ac07f2228021b6c3e95787530dba" prot="package" static="yes" mutable="no">
+        <type><ref refid="classnetworking_1_1_downloader_worker_thread" kindref="compound">DownloaderWorkerThread</ref></type>
+        <definition>DownloaderWorkerThread networking.ThreadManager.workerThread</definition>
+        <argsstring></argsstring>
+        <name>workerThread</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" line="10" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classnetworking_1_1_thread_manager_1abe89e25548971d163970a98772409eb7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void networking.ThreadManager.executeWorkWithTag</definition>
+        <argsstring>(String tag)</argsstring>
+        <name>executeWorkWithTag</name>
+        <param>
+          <type>String</type>
+          <declname>tag</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" line="12" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" bodystart="12" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classnetworking_1_1_thread_manager_1a222d3c467d91e8404c66861291c501b4" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void networking.ThreadManager.executeWork</definition>
+        <argsstring>()</argsstring>
+        <name>executeWork</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" line="21" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" bodystart="21" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classnetworking_1_1_thread_manager" kindref="compound">ThreadManager</ref> - I added this class to have another layer between users of worker thread and the worker thread</para><para><simplesect kind="author"><para>Seitan </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="44">
+        <label>networking.DownloaderWorkerThread</label>
+        <link refid="classnetworking_1_1_downloader_worker_thread"/>
+        <childnode refid="45" relation="public-inheritance">
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>entryIDs</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>Vector&lt; String &gt;</label>
+      </node>
+      <node id="43">
+        <label>networking.ThreadManager</label>
+        <link refid="classnetworking_1_1_thread_manager"/>
+        <childnode refid="44" relation="usage">
+          <edgelabel>workerThread</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>javax::swing::SwingWorker&lt; Boolean, Void &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" line="8" column="1" bodyfile="E:/Git/flickmage/flickmage/src/networking/ThreadManager.java" bodystart="8" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classnetworking_1_1_thread_manager_1a222d3c467d91e8404c66861291c501b4" prot="public" virt="non-virtual"><scope>networking::ThreadManager</scope><name>executeWork</name></member>
+      <member refid="classnetworking_1_1_thread_manager_1abe89e25548971d163970a98772409eb7" prot="public" virt="non-virtual"><scope>networking::ThreadManager</scope><name>executeWorkWithTag</name></member>
+      <member refid="classnetworking_1_1_thread_manager_1a2464ac07f2228021b6c3e95787530dba" prot="package" virt="non-virtual"><scope>networking::ThreadManager</scope><name>workerThread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

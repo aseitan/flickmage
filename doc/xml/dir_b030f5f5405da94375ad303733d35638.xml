@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_b030f5f5405da94375ad303733d35638" kind="dir">
+    <compoundname>E:/Git/flickmage/flickmage/src/utils</compoundname>
+    <innerfile refid="_custom_logger_8java">CustomLogger.java</innerfile>
+    <innerfile refid="_o_s_specific_8java">OSSpecific.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/utils/"/>
+  </compounddef>
+</doxygen>

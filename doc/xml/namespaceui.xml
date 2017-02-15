@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespaceui" kind="namespace" language="Java">
+    <compoundname>ui</compoundname>
+    <innerclass refid="classui_1_1_image_view_wrapper" prot="public">ui::ImageViewWrapper</innerclass>
+    <innerclass refid="classui_1_1_publish_date_comparator" prot="package">ui::PublishDateComparator</innerclass>
+    <innerclass refid="classui_1_1_taken_date_comparator" prot="package">ui::TakenDateComparator</innerclass>
+    <innerclass refid="classui_1_1_u_i_manager" prot="public">ui::UIManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/ui/ImageViewWrapper.java" line="1" column="1"/>
+  </compounddef>
+</doxygen>

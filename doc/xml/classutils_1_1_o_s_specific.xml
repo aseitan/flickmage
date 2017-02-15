@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classutils_1_1_o_s_specific" kind="class" language="Java" prot="public">
+    <compoundname>utils::OSSpecific</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classutils_1_1_o_s_specific_1a5ea0754f6061d17e569184b89487efe2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void utils.OSSpecific.openWebpage</definition>
+        <argsstring>(URI uri)</argsstring>
+        <name>openWebpage</name>
+        <param>
+          <type>URI</type>
+          <declname>uri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" line="28" column="1" bodyfile="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" bodystart="28" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classutils_1_1_o_s_specific_1ae9690273ec09d48253837545866a3082" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void utils.OSSpecific.openWebpage</definition>
+        <argsstring>(URL url)</argsstring>
+        <name>openWebpage</name>
+        <param>
+          <type>URL</type>
+          <declname>url</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" line="39" column="1" bodyfile="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classutils_1_1_o_s_specific_1a828ec74ec94dd4bce9ff7c61b8a5d932" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void utils.OSSpecific.copyFile</definition>
+        <argsstring>(File sourceFile, File destFile)</argsstring>
+        <name>copyFile</name>
+        <param>
+          <type>File</type>
+          <declname>sourceFile</declname>
+        </param>
+        <param>
+          <type>File</type>
+          <declname>destFile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" line="47" column="1" bodyfile="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" bodystart="47" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Seitan </para></simplesect>
+</para>    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" line="26" column="1" bodyfile="E:/Git/flickmage/flickmage/src/utils/OSSpecific.java" bodystart="26" bodyend="85"/>
+    <listofallmembers>
+      <member refid="classutils_1_1_o_s_specific_1a828ec74ec94dd4bce9ff7c61b8a5d932" prot="public" virt="non-virtual"><scope>utils::OSSpecific</scope><name>copyFile</name></member>
+      <member refid="classutils_1_1_o_s_specific_1a5ea0754f6061d17e569184b89487efe2" prot="public" virt="non-virtual"><scope>utils::OSSpecific</scope><name>openWebpage</name></member>
+      <member refid="classutils_1_1_o_s_specific_1ae9690273ec09d48253837545866a3082" prot="public" virt="non-virtual"><scope>utils::OSSpecific</scope><name>openWebpage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

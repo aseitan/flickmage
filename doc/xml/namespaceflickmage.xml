@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespaceflickmage" kind="namespace" language="Java">
+    <compoundname>flickmage</compoundname>
+    <innerclass refid="classflickmage_1_1_flick_mage" prot="public">flickmage::FlickMage</innerclass>
+    <innerclass refid="classflickmage_1_1_f_x_m_l_document_controller" prot="public">flickmage::FXMLDocumentController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/flickmage/FlickMage.java" line="1" column="1"/>
+  </compounddef>
+</doxygen>

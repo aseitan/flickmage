@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_custom_logger_8java" kind="file" language="Java">
+    <compoundname>CustomLogger.java</compoundname>
+    <innerclass refid="classutils_1_1_custom_logger" prot="public">utils::CustomLogger</innerclass>
+    <innernamespace refid="namespaceutils">utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceutils" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">utils;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.logging.Logger;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classutils_1_1_custom_logger" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classutils_1_1_custom_logger" kindref="compound">CustomLogger</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Logger<sp/><ref refid="classutils_1_1_custom_logger_1aa8248e9f0aff7d2bac9835e18a936a8e" kindref="member">logger</ref><sp/>=<sp/>Logger.getLogger(<sp/><ref refid="classutils_1_1_custom_logger" kindref="compound">CustomLogger</ref>.class.getName()<sp/>);</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="E:/Git/flickmage/flickmage/src/utils/CustomLogger.java"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacenetworking" kind="namespace" language="Java">
+    <compoundname>networking</compoundname>
+    <innerclass refid="classnetworking_1_1_downloader_worker_thread" prot="public">networking::DownloaderWorkerThread</innerclass>
+    <innerclass refid="classnetworking_1_1_file_manager" prot="public">networking::FileManager</innerclass>
+    <innerclass refid="classnetworking_1_1_network" prot="public">networking::Network</innerclass>
+    <innerclass refid="classnetworking_1_1_thread_manager" prot="public">networking::ThreadManager</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="E:/Git/flickmage/flickmage/src/networking/DownloaderWorkerThread.java" line="1" column="1"/>
+  </compounddef>
+</doxygen>
