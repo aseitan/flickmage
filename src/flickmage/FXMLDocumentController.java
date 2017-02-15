@@ -1,51 +1,59 @@
 package flickmage;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.TilePane;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.shape.Circle;
+
+import javafx.scene.control.TextArea;
+import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
+import ui.UIManager;
 
 public class FXMLDocumentController implements Initializable {
-    
+
     @FXML
-    private Label label;
-    
+    public Pane ImageContainerPane;
     @FXML
-    private TilePane imageContainer;
+    public Button SearchByTagButton;
+    @FXML
+    public TextField TagTextField;
+    @FXML
+    public Circle LoadingCircle;
+    @FXML
+    public TextArea DetailsTextArea;
     
     @Override
-    public void initialize(URL url, ResourceBundle rb)
-    {
-        if (0==0)return;
-        String path = "cache/";
-        File folder = new File(path);
-        File[] listOfFiles = folder.listFiles();
+    public void initialize(URL url, ResourceBundle rb) {
+        UIManager.getInstance().initializeController(this);
+    }
 
-        if(imageContainer == null )
-        {
-            for (final File file : listOfFiles) {
-                
-                Image image = null;
-                try {
-                    image = new Image(new FileInputStream(file), 150, 0, true, true);
-                } catch (FileNotFoundException ex) {
-                    Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
-                }
+    @FXML
+    private void SearchByTag(ActionEvent event) {
+        UIManager.getInstance().startDownloadByTag(TagTextField.getText());
+    }
+    
+    @FXML
+    private void SortByDateTaked(ActionEvent event) {
+        UIManager.getInstance().sortByDateTaken(true);
+    }
+    
+    @FXML
+    private void SortByDatePublished(ActionEvent event) {
+        UIManager.getInstance().sortByDateTaken(false);
+    }
 
-                ImageView imageView = new ImageView(image);
-                imageContainer.getChildren().add(imageView);
+    public void SetDownloadStatusDone(int done) {
+        if (LoadingCircle != null) {
+            if (done == 0) {
+                LoadingCircle.setFill(Color.YELLOW);
+            } else {
+                LoadingCircle.setFill(Color.GREEN);
             }
         }
-    }    
-    
+    }
 }

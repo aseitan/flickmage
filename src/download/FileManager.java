@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.StringWriter;
+import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -26,11 +27,15 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
+import ui.ImageViewWrapper;
 
 public class FileManager {
 
-    static void parseXML(String httpResponse) {
+    static Vector<String> parseXML(String httpResponse) {
         Document doc = convertStringToDocument(httpResponse);
+        Vector<String> IDs;
+        IDs = new Vector<String>();
 
 //        //debug only. remove this after a while.
 //        DOMSource source = new DOMSource(doc);
@@ -65,8 +70,8 @@ public class FileManager {
                 String phid = null;
                 if (eElement.getElementsByTagName("id").getLength() == 1) {
                     String wholeId = eElement.getElementsByTagName("id").item(0).getTextContent();
-                    phid = wholeId.substring(wholeId.lastIndexOf("/"), wholeId.length() - 1);
-
+                    phid = wholeId.substring(wholeId.lastIndexOf("/") + 1, wholeId.length() - 1);
+                    IDs.add(phid);
                     writeMetaData(node.cloneNode(true), phid); //use the photo id to uniquely identify the photo metadata
                 }
                 //this return at least two nodes type link. check which one has type="image/jpeg"
@@ -83,6 +88,7 @@ public class FileManager {
                 }
             }
         }
+        return IDs;
     }
 
     private static void writeMetaData(Node n, String uniqueID) {
@@ -140,4 +146,58 @@ public class FileManager {
         return null;
     }
 
+    public static void fillData(String id, ImageViewWrapper viewWrapper) {
+        File fXmlFile = new File("cache/metadata/" + id + ".xml");
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = null;
+        Document doc = null;
+        try {
+            dBuilder = dbFactory.newDocumentBuilder();
+        } catch (ParserConfigurationException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            doc = dBuilder.parse(fXmlFile);
+        } catch (SAXException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        NodeList nodeList = doc.getElementsByTagName("entry");
+        doc.getDocumentElement().normalize();
+
+        for (int i = 0; i < nodeList.getLength(); i++) {
+            Node node = nodeList.item(i);
+            if (node.getNodeType() == Node.ELEMENT_NODE) {
+                Element eElement = (Element) nodeList.item(i);
+                String phid = null;
+                if (eElement.getElementsByTagName("title").getLength() == 1) {
+                    String title = eElement.getElementsByTagName("title").item(0).getTextContent();
+                    viewWrapper.setTitle(title);
+                }
+                if (eElement.getElementsByTagName("published").getLength() == 1) {
+                    String publishDate = eElement.getElementsByTagName("published").item(0).getTextContent();
+                    viewWrapper.setPublishDateFromString(publishDate);
+                }
+                if (eElement.getElementsByTagName("flickr:date_taken").getLength() == 1) {
+                    String takenDate = eElement.getElementsByTagName("flickr:date_taken").item(0).getTextContent();
+                    viewWrapper.setTakenDateFromString(takenDate);
+                }
+                NodeList jpgs = eElement.getElementsByTagName("link");
+                for (int k = 0; k < jpgs.getLength(); k++) {
+                    Node nodeJPG = jpgs.item(k);
+                    if (nodeJPG.getNodeType() == Node.ELEMENT_NODE) {
+                        Element elemJPG = (Element) jpgs.item(k);
+                        if (elemJPG.getAttribute("type") != null && elemJPG.getAttribute("type").contains("jpeg")) {
+                            viewWrapper.setURL(elemJPG.getAttribute("href"));
+                        }
+                    }
+                }
+
+            }
+        }
+        
+        
+    }
 }

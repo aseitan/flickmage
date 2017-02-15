@@ -1,6 +1,6 @@
 package flickmage;
 
-import download.ImageDownloaderThread;
+import download.ThreadManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -20,10 +20,12 @@ public class FlickMage extends Application {
     }
 
     public static void main(String[] args) {
-        ImageDownloaderThread th = new ImageDownloaderThread();
-        th.initializeTag("coding");
-        th.run();
+        //at first load a default feed (no tags)
+        //what should we do here? wait for the load to finish ? YES
+        
+        ThreadManager.executeWork();
         
         launch(args);
     }
+
 }

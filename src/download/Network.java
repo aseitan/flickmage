@@ -5,9 +5,7 @@
  */
 package download;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -29,7 +27,7 @@ public class Network {
         try {
             obj = new URL(usedURL);
         } catch (MalformedURLException ex) {
-            java.util.logging.Logger.getLogger(ImageDownloaderThread.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DownloaderWorkerThread.class.getName()).log(Level.SEVERE, null, ex);
         }
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
