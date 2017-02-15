@@ -1,5 +1,10 @@
-package download;
+package networking;
 
+/**
+ * ThreadManager - I added this class to have another layer between users of worker thread and the worker thread
+ * 
+ * @author Seitan
+ */
 public class ThreadManager {
 
     static DownloaderWorkerThread workerThread = null;

@@ -1,5 +1,4 @@
-package download;
-
+package networking;
 
 import java.io.IOException;
 import java.util.Vector;
@@ -8,6 +7,11 @@ import javax.swing.SwingWorker;
 import ui.UIManager;
 import utils.CustomLogger;
 
+/**
+ * Worker thread used for async operations (non-UI actions): http calls, downloading images, text parsing, etc
+ * 
+ * @author Seitan
+ */
 public class DownloaderWorkerThread extends SwingWorker<Boolean, Void> {
 
     final String url = "https://api.flickr.com/services/feeds/photos_public.gne";
@@ -28,7 +32,7 @@ public class DownloaderWorkerThread extends SwingWorker<Boolean, Void> {
             usedURL = url;
         }
         try {
-            entryIDs = FileManager.parseXML(download.Network.sendHTTPGet(usedURL));
+            entryIDs = FileManager.parseXML(networking.Network.sendHTTPGet(usedURL));
         } catch (IOException ex) {
             java.util.logging.Logger.getLogger(DownloaderWorkerThread.class.getName()).log(Level.SEVERE, null, ex);
         }

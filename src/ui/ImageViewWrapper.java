@@ -9,8 +9,14 @@ import java.util.logging.Level;
 import javafx.event.EventHandler;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import utils.CustomLogger;
 
+/**
+ * ImageViewWrapper - Data structure used to store info about Flickr posts: URL, metadata, etc 
+ * 
+ * @author Seitan
+ */
 public class ImageViewWrapper {
 
     //add the metadata here
@@ -19,6 +25,7 @@ public class ImageViewWrapper {
     String id;
     String title;
     ImageView imageView;
+    HBox pictureRegion;
     EventHandler handler;
     String url;
 
@@ -31,6 +38,7 @@ public class ImageViewWrapper {
         publishDate = new Date();
 
         handler = (EventHandler<MouseEvent>) (final MouseEvent keyEvent) -> {
+            CustomLogger.logger.log(Level.INFO, "EventHandler click");
             UIManager.getInstance().imageSelected(this);
         };
     }
@@ -113,6 +121,24 @@ public class ImageViewWrapper {
             publishDate = df.parse(d);
         } catch (ParseException e) {
         }
+    }
+
+    public void setSelected() {
+        pictureRegion.setStyle("-fx-padding: 5;"
+                + "-fx-border-style: solid inside;"
+                + "-fx-border-width: 1;"
+                + "-fx-border-insets: 3;"
+                + "-fx-border-radius: 5;"
+                + "-fx-border-color: blue;");
+    }
+
+    public void setUnselected() {
+        pictureRegion.setStyle("-fx-padding: 5;"
+                + "-fx-border-style: solid inside;"
+                + "-fx-border-width: 1;"
+                + "-fx-border-insets: 3;"
+                + "-fx-border-radius: 5;"
+                + "-fx-border-color: cyan;");
     }
 }
 

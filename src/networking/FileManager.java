@@ -1,4 +1,4 @@
-package download;
+package networking;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +26,12 @@ import org.xml.sax.SAXException;
 import ui.ImageViewWrapper;
 import utils.CustomLogger;
 
+/**
+ * FileManager - class used for parsing XML into DOM and DOM structures into XML
+ * files.
+ *
+ * @author Seitan
+ */
 public class FileManager {
 
     static Vector<String> parseXML(String httpResponse) {
@@ -33,29 +39,6 @@ public class FileManager {
         Document doc = convertStringToDocument(httpResponse);
         Vector<String> IDs;
         IDs = new Vector<String>();
-
-//        //debug only. remove this after a while.
-//        DOMSource source = new DOMSource(doc);
-//        FileWriter writer = null;
-//        try {
-//            writer = new FileWriter(new File("output.xml"));
-//        } catch (IOException ex) {
-//            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        StreamResult result = new StreamResult(writer);
-//
-//        TransformerFactory transformerFactory = TransformerFactory.newInstance();
-//        Transformer transformer = null;
-//        try {
-//            transformer = transformerFactory.newTransformer();
-//        } catch (TransformerConfigurationException ex) {
-//            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//        try {
-//            transformer.transform(source, result);
-//        } catch (TransformerException ex) {
-//            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
-//        }
 
         // each XML node entry should be a photo. caching the jpg and the metadata
         NodeList nodeList = doc.getElementsByTagName("entry");
@@ -69,9 +52,9 @@ public class FileManager {
                 if (eElement.getElementsByTagName("id").getLength() == 1) {
                     String wholeId = eElement.getElementsByTagName("id").item(0).getTextContent();
                     phid = wholeId.substring(wholeId.lastIndexOf("/") + 1, wholeId.length() - 1);
-                    
+
                     CustomLogger.logger.log(Level.INFO, "Parsed id: " + phid);
-                    
+
                     IDs.add(phid);
                     writeMetaData(node.cloneNode(true), phid); //use the photo id to uniquely identify the photo metadata
                 }
@@ -197,9 +180,7 @@ public class FileManager {
                         }
                     }
                 }
-
             }
         }
-
     }
 }

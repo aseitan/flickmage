@@ -7,6 +7,7 @@
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.TilePane?>
@@ -15,14 +16,14 @@
 
 <AnchorPane id="AnchorPane" pickOnBounds="false" prefHeight="447.0" prefWidth="1157.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="flickmage.FXMLDocumentController">
     <children>
-        <Label fx:id="label" layoutX="317.0" layoutY="14.0" minHeight="16" minWidth="69" prefWidth="192.0" text="Welcome to FlickMage">
+        <Label fx:id="label" alignment="CENTER" contentDisplay="CENTER" layoutX="483.0" layoutY="21.0" minHeight="16" minWidth="69" prefWidth="192.0" text="FlickMage">
          <font>
             <Font size="19.0" />
          </font></Label>
       <Pane layoutX="937.0" layoutY="49.0" prefHeight="398.0" prefWidth="214.0" style="-fx-background-color: light gray;" AnchorPane.leftAnchor="937.0" AnchorPane.topAnchor="49.0">
          <children>
-            <Label layoutX="65.0" text="Image details" />
-            <TextArea fx:id="DetailsTextArea" editable="false" layoutX="14.0" layoutY="19.0" prefHeight="328.0" prefWidth="187.0" wrapText="true" />
+            <Label layoutX="81.0" text="Metadata" />
+            <TextArea fx:id="DetailsTextArea" editable="false" layoutX="14.0" layoutY="19.0" opacity="0.8" prefHeight="328.0" prefWidth="187.0" wrapText="true" />
             <Button fx:id="SaveButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#SaveFileToSystemGallery" text="Save" />
             <Button fx:id="ShareButton" layoutX="155.0" layoutY="359.0" mnemonicParsing="false" onAction="#ShareFileViaMail" text="Share" />
             <Button fx:id="OpenButton" layoutX="84.0" layoutY="359.0" mnemonicParsing="false" onAction="#OpenFileInBrowser" text="Open" />
@@ -33,13 +34,13 @@
       </Pane>
       <Group layoutX="34.0" layoutY="80.0">
          <children>
-            <TextField fx:id="TagTextField" accessibleText="asdasda" layoutX="-15.0" layoutY="-22.0" prefHeight="25.0" prefWidth="151.0" promptText="tag" />
+            <TextField fx:id="TagTextField" accessibleText="asdasda" layoutX="-15.0" layoutY="-22.0" onAction="#SearchButtonEnter" prefHeight="25.0" prefWidth="151.0" promptText="tag" />
             <Button fx:id="SearchByTagButton" layoutX="-15.0" layoutY="4.0" mnemonicParsing="false" onAction="#SearchByTag" text="Search by tag" />
          </children>
       </Group>
       <Group layoutX="20.0" layoutY="146.0">
          <children>
-            <Label layoutY="4.0" text="Soft by date:" />
+            <Label layoutY="8.0" text="Soft by date:" />
             <Button layoutY="27.0" mnemonicParsing="false" onAction="#SortByDateTaked" prefHeight="25.0" prefWidth="150.0" text="Date taken" />
             <Button layoutY="54.0" mnemonicParsing="false" onAction="#SortByDatePublished" prefHeight="25.0" prefWidth="150.0" text="Date published" />
          </children>
@@ -54,5 +55,10 @@
         </content>
       </ScrollPane>
       <Circle fx:id="LoadingCircle" fill="#f2ff00" layoutX="182.0" layoutY="69.0" radius="7.0" stroke="BLACK" strokeType="INSIDE" />
+      <Pane layoutX="9.0" layoutY="332.0" prefHeight="104.0" prefWidth="192.0">
+         <children>
+            <ImageView fx:id="LogoImage" fitHeight="86.0" fitWidth="180.0" layoutX="6.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
     </children>
 </AnchorPane>

@@ -1,29 +1,32 @@
 package ui;
 
-import download.FileManager;
-import download.ThreadManager;
+import networking.FileManager;
+import networking.ThreadManager;
 import flickmage.FXMLDocumentController;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.application.Platform;
+import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.FileChooser;
-import javafx.stage.Stage;
+import javafx.scene.layout.HBox;
 import javax.swing.JFileChooser;
 import utils.CustomLogger;
 import utils.OSSpecific;
 
+/**
+ * UIManager - big class used to updated UI logic and to manage connection to worker thread.
+ * 
+ * @author Seitan
+ */
 public class UIManager {
 
     private static UIManager managerSingle = null;
@@ -76,22 +79,32 @@ public class UIManager {
                     dataView.add(imageViewWrapper);
                 }
 
-                imageViewWrapper.imageView.setOnMouseClicked(imageViewWrapper.handler);
-
+                //imageViewWrapper.imageView.setOnMouseClicked(imageViewWrapper.handler);
                 //avoid changing UI elements from worker thread. javafx does not allow that
                 Platform.runLater(new Runnable() {
                     @Override
                     public void run() {
                         //i'm using fixed sizes because flickr call returns only 20 items. this is not scalable. YET
                         //imageView.setFitHeight(170);
-                        imageViewWrapper.imageView.setFitWidth(100);
+                        imageViewWrapper.imageView.setFitWidth(125);
 
-                        //imageView.maxHeight(10);
-                        //imageView.maxWidth(10);
-                        imageViewWrapper.imageView.preserveRatioProperty();
+                        imageViewWrapper.imageView.setPreserveRatio(true);
+                        imageViewWrapper.imageView.setSmooth(true);
+
+                        imageViewWrapper.pictureRegion = new HBox(50);
+                        imageViewWrapper.pictureRegion.setOnMouseClicked(imageViewWrapper.handler);
+                        
+                        imageViewWrapper.pictureRegion.getChildren().add(imageViewWrapper.imageView);
+                        imageViewWrapper.pictureRegion.setAlignment(Pos.CENTER);
+                        imageViewWrapper.pictureRegion.setStyle("-fx-padding: 5;"
+                                + "-fx-border-style: solid inside;"
+                                + "-fx-border-width: 1;"
+                                + "-fx-border-insets: 3;"
+                                + "-fx-border-radius: 5;"
+                                + "-fx-border-color: cyan;");
                         if (controller != null && controller.ImageContainerPane != null) {
-                            if (!controller.ImageContainerPane.getChildren().contains(imageViewWrapper.imageView)) {
-                                controller.ImageContainerPane.getChildren().add(imageViewWrapper.imageView);
+                            if (!controller.ImageContainerPane.getChildren().contains(imageViewWrapper.pictureRegion)) {
+                                controller.ImageContainerPane.getChildren().add(imageViewWrapper.pictureRegion);
                             }
                         }
                     }
@@ -110,6 +123,7 @@ public class UIManager {
     }
 
     public void startDownloadByTag(String tag) {
+        selectedItem = null;
         if (controller != null && controller.ImageContainerPane != null) {
             controller.ImageContainerPane.getChildren().clear();
         }
@@ -127,6 +141,11 @@ public class UIManager {
     }
 
     public void imageSelected(ImageViewWrapper wr) {
+        CustomLogger.logger.log(Level.INFO, "Clicked. Image selected id = " + wr.getID());
+        if (selectedItem != null) {
+            selectedItem.setUnselected();
+        }
+        wr.setSelected();
         selectedItem = wr;
         if (controller != null && controller.DetailsTextArea != null) {
             controller.DetailsTextArea.setText("Title: " + wr.getTitle() + " \n\nPublished: " + wr.getPublishDateAsString() + "\n\nTaken: " + wr.getTakenDateAsString());
@@ -157,7 +176,6 @@ public class UIManager {
         if (selectedItem == null) {
             return;
         }
-
         //i know it is an ugly dialog, but its actually the only way. 
         JFileChooser chooser = new JFileChooser();
         chooser.setCurrentDirectory(new java.io.File(System.getProperty("user.home")));
