@@ -1,10 +1,8 @@
 package download;
 
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringReader;
-import java.io.StringWriter;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,8 +10,6 @@ import java.util.logging.Logger;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Source;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -23,16 +19,17 @@ import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 import ui.ImageViewWrapper;
+import utils.CustomLogger;
 
 public class FileManager {
 
     static Vector<String> parseXML(String httpResponse) {
+        CustomLogger.logger.log(Level.INFO, "httpResponse: " + httpResponse);
         Document doc = convertStringToDocument(httpResponse);
         Vector<String> IDs;
         IDs = new Vector<String>();
@@ -59,6 +56,7 @@ public class FileManager {
 //        } catch (TransformerException ex) {
 //            Logger.getLogger(FileManager.class.getName()).log(Level.SEVERE, null, ex);
 //        }
+
         // each XML node entry should be a photo. caching the jpg and the metadata
         NodeList nodeList = doc.getElementsByTagName("entry");
         doc.getDocumentElement().normalize();
@@ -71,6 +69,9 @@ public class FileManager {
                 if (eElement.getElementsByTagName("id").getLength() == 1) {
                     String wholeId = eElement.getElementsByTagName("id").item(0).getTextContent();
                     phid = wholeId.substring(wholeId.lastIndexOf("/") + 1, wholeId.length() - 1);
+                    
+                    CustomLogger.logger.log(Level.INFO, "Parsed id: " + phid);
+                    
                     IDs.add(phid);
                     writeMetaData(node.cloneNode(true), phid); //use the photo id to uniquely identify the photo metadata
                 }
@@ -81,8 +82,10 @@ public class FileManager {
                     if (nodeJPG.getNodeType() == Node.ELEMENT_NODE) {
                         Element elemJPG = (Element) jpgs.item(k);
                         if (elemJPG.getAttribute("type") != null && elemJPG.getAttribute("type").contains("jpeg")) {
+                            String parsedURL = elemJPG.getAttribute("href");
+                            CustomLogger.logger.log(Level.INFO, "Parsed URL = " + parsedURL);
                             //download image
-                            Network.downloadImage(elemJPG.getAttribute("href"), "cache/" + phid + ".jpg");
+                            Network.downloadImage(parsedURL, "cache/" + phid + ".jpg");
                         }
                     }
                 }
@@ -197,7 +200,6 @@ public class FileManager {
 
             }
         }
-        
-        
+
     }
 }

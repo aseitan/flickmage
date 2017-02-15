@@ -5,9 +5,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.logging.Level;
 import javafx.event.EventHandler;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import utils.CustomLogger;
 
 public class ImageViewWrapper {
 
@@ -19,15 +21,14 @@ public class ImageViewWrapper {
     ImageView imageView;
     EventHandler handler;
     String url;
-    Boolean sortByDateTaken;
 
     final String dateFormat = "yyyy-MM-dd hh:mm:ss";
 
     ImageViewWrapper(String imgID) {
+        CustomLogger.logger.log(Level.INFO, "ImageViewWrapper id = " + imgID);
         id = imgID;
         takenDate = new Date();
         publishDate = new Date();
-        sortByDateTaken = true;
 
         handler = (EventHandler<MouseEvent>) (final MouseEvent keyEvent) -> {
             UIManager.getInstance().imageSelected(this);
@@ -42,6 +43,7 @@ public class ImageViewWrapper {
     }
 
     public void setURL(String u) {
+        CustomLogger.logger.log(Level.INFO, "ImageViewWrapper url = " + u);
         url = u;
     }
 
@@ -53,6 +55,7 @@ public class ImageViewWrapper {
     }
 
     public void setTitle(String t) {
+        CustomLogger.logger.log(Level.INFO, "ImageViewWrapper title = " + t);
         title = t;
     }
 
@@ -79,16 +82,24 @@ public class ImageViewWrapper {
         return takenDate;
     }
 
-    public Date getPublishDate() {
-        return publishDate;
-    }
-
     public String getTakenDateAsString() {
         if (takenDate == null) {
             return "";
         }
         DateFormat df = new SimpleDateFormat(dateFormat);
         return df.format(takenDate);
+    }
+
+    public Date getPublishDate() {
+        return publishDate;
+    }
+
+    public String getPublishDateAsString() {
+        if (publishDate == null) {
+            return "";
+        }
+        DateFormat df = new SimpleDateFormat(dateFormat);
+        return df.format(publishDate);
     }
 
     public void setPublishDateFromString(String d) {
@@ -102,21 +113,7 @@ public class ImageViewWrapper {
             publishDate = df.parse(d);
         } catch (ParseException e) {
         }
-
     }
-
-    public String getPublishDateAsString() {
-        if (publishDate == null) {
-            return "";
-        }
-        DateFormat df = new SimpleDateFormat(dateFormat);
-        return df.format(publishDate);
-    }
-
-    public void setSortByDateTaken(Boolean b) {
-        sortByDateTaken = b;
-    }
-
 }
 
 class TakenDateComparator implements Comparator<ImageViewWrapper> {
@@ -127,6 +124,7 @@ class TakenDateComparator implements Comparator<ImageViewWrapper> {
         Date takenDate1 = ((ImageViewWrapper) o1).getTakenDate();
         Date takenDate2 = ((ImageViewWrapper) o2).getTakenDate();
         if (takenDate1 == null || takenDate2 == null) {
+            CustomLogger.logger.log(Level.SEVERE, "takenDate1 = " + takenDate1 + " takenDate2=" + takenDate2);
             return 0;
         }
         return takenDate1.compareTo(takenDate2);
@@ -141,6 +139,7 @@ class PublishDateComparator implements Comparator<ImageViewWrapper> {
         Date publishDate2 = ((ImageViewWrapper) o2).getPublishDate();
 
         if (publishDate1 == null || publishDate2 == null) {
+            CustomLogger.logger.log(Level.SEVERE, "publishDate1 = " + publishDate1 + " publishDate2=" + publishDate2);
             return 0;
         }
         return publishDate1.compareTo(publishDate2);

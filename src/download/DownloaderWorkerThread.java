@@ -1,11 +1,12 @@
 package download;
 
+
 import java.io.IOException;
 import java.util.Vector;
 import java.util.logging.Level;
 import javax.swing.SwingWorker;
 import ui.UIManager;
-import utils.Logger;
+import utils.CustomLogger;
 
 public class DownloaderWorkerThread extends SwingWorker<Boolean, Void> {
 
@@ -13,12 +14,12 @@ public class DownloaderWorkerThread extends SwingWorker<Boolean, Void> {
     final String urlWithTag = "https://api.flickr.com/services/feeds/photos_public.gne?tags=";
     String tag = "";
     Vector<String> entryIDs;
-    
+
     public Boolean isWorking = false;
 
     @Override
     protected Boolean doInBackground() throws Exception {
-        Logger.log("Started data downloading");
+        CustomLogger.logger.log(Level.INFO, "Started data downloading");
         isWorking = true;
         String usedURL = "";
         if (tag.length() != 0) {
@@ -31,9 +32,9 @@ public class DownloaderWorkerThread extends SwingWorker<Boolean, Void> {
         } catch (IOException ex) {
             java.util.logging.Logger.getLogger(DownloaderWorkerThread.class.getName()).log(Level.SEVERE, null, ex);
         }
+        CustomLogger.logger.log(Level.INFO, "Done data downloading tag = " + tag);
         tag = "";
         isWorking = false;
-        Logger.log("Done data downloading tag=" + tag);
         return null;
     }
 

@@ -19,12 +19,13 @@
          <font>
             <Font size="19.0" />
          </font></Label>
-      <Pane layoutX="937.0" layoutY="58.0" prefHeight="398.0" prefWidth="214.0" style="-fx-background-color: light gray;" AnchorPane.leftAnchor="937.0" AnchorPane.topAnchor="58.0">
+      <Pane layoutX="937.0" layoutY="49.0" prefHeight="398.0" prefWidth="214.0" style="-fx-background-color: light gray;" AnchorPane.leftAnchor="937.0" AnchorPane.topAnchor="49.0">
          <children>
-            <Label layoutX="65.0" layoutY="2.0" text="Image details" />
+            <Label layoutX="65.0" text="Image details" />
             <TextArea fx:id="DetailsTextArea" editable="false" layoutX="14.0" layoutY="19.0" prefHeight="328.0" prefWidth="187.0" wrapText="true" />
-            <Button layoutX="14.0" layoutY="359.0" mnemonicParsing="false" text="Save" />
-            <Button layoutX="155.0" layoutY="359.0" mnemonicParsing="false" text="Share" />
+            <Button fx:id="SaveButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" onAction="#SaveFileToSystemGallery" text="Save" />
+            <Button fx:id="ShareButton" layoutX="155.0" layoutY="359.0" mnemonicParsing="false" onAction="#ShareFileViaMail" text="Share" />
+            <Button fx:id="OpenButton" layoutX="84.0" layoutY="359.0" mnemonicParsing="false" onAction="#OpenFileInBrowser" text="Open" />
          </children>
          <effect>
             <ColorAdjust />

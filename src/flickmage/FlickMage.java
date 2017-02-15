@@ -19,10 +19,7 @@ public class FlickMage extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) {
-        //at first load a default feed (no tags)
-        //what should we do here? wait for the load to finish ? YES
-        
+    public static void main(String[] args) { 
         ThreadManager.executeWork();
         
         launch(args);
