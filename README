@@ -11,6 +11,8 @@ Structure:
 	resources/logo - logo images used within the application
 	src/ - sources code
 	
+	use runApp.bat to easily run the app.
+	
 Prequisites: Have an internet connection and java installed. 
 Usage: Browse for flickr using tags as search tool and clicking an image loads its metadata.
 The circle near the tag search box shows working status (yellow means busy, you know what green means).
